@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Super | Reports{% endblock %}
+{% block headlinks %}{% endblock %}
+{% block body %}
+ {% include 'navbar.html' %}
+    <form method="POST" enctype="multipart/form-data" class="container justify-content-center">
+      {% csrf_token %}
+      <div class="form-group justify-content-center">
+          <div class="input-group">
+              <div class="custom-file">
+                  <input type="file" name="file" class="custom-file-input" id="customFile" required>
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary text-success mt-3 ml-auto" type="button">Upload File</button>
+      </div>
+   </form>
+<table class="table shadow-soft rounded text-center">
+    <tr>
+        <th class="border-0 text-info" scope="col" id="class" colspan="2">Super</th>
+    </tr>
+    <tr>
+        <th class="border-0" scope="col" id="class">Files</th>
+        <th class="border-0" scope="col" id="teacher">#Action</th>
+    </tr>
+    {% for object in data %}
+    <tr>
+        <td headers="firstyear Bolter males"><a href="{{object.file.url}}">{{object.file}}</td>
+        <td headers="firstyear Bolter females"><a href="/super/{{object.id}}"><button class="btn btn-primary text-danger" type="button">Delete</button></a></td>
+    </tr>
+    {% endfor %}
+     <tr>
+        <td headers="firstyear Bolter males"><a href="/super/merged"><button class="btn btn-primary text-success" type="button">Download Merged</button></a></td>
+        <td headers="firstyear Bolter females"><a href="/super/processed"><button class="btn btn-primary text-success" type="button">Download Processed</button></a></td>
+    </tr>
+
+</table>
+{% endblock %}
+{% block bodylinks %}
+
+{% endblock %}

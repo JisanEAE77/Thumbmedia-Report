@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard | Reports{% endblock %}
+{% block headlinks %}{% endblock %}
+{% block body %}
+ {% include 'navbar.html' %}
+<table class="table shadow-soft rounded text-center">
+    <tr>
+        <th class="border-0 text-info" scope="col" id="class" colspan="2">Dashboard</th>
+    </tr>
+     <tr>
+        <td headers="firstyear Bolter females"><a href="/total"><button class="btn btn-primary text-success" type="button">Download Total CSV</button></a></td>
+    </tr>
+
+</table>
+{% endblock %}
+{% block bodylinks %}
+
+{% endblock %}

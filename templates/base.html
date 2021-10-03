@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link type="text/css" href="{% static 'base-css/all.min.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'base-css/neumorphism.css' %}" rel="stylesheet">
+    {% block headlinks %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+
+    <script src="{% static 'base-js/jquery.min.js' %}"></script>
+    <script src="{% static 'base-js/popper.min.js' %}"></script>
+    <script src="{% static 'base-js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'base-js/headroom.min.js' %}"></script>
+    <script src="{% static 'base-js/on-screen.umd.min.js' %}"></script>
+    <script src="{% static 'base-js/nouislider.min.js' %}"></script>
+    <script src="{% static 'base-js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'base-js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'base-js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'base-js/jarallax.min.js' %}"></script>
+    <script src="{% static 'base-js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'base-js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'base-js/smooth-scroll.polyfills.min.js' %}"></script>
+    <script src="{% static 'base-js/prism.js' %}"></script>
+    <script async defer="defer" src="{% static 'base-js/buttons.js' %}"></script>
+    <script src="{% static 'base-js/neumorphism.js' %}"></script>
+
+    {% block bodylinks %}{% endblock %}
+</body>
+</html>
+
